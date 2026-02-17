@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;   
+    gap: 10px;                    
+    padding: 10px;
+}
+
+figure {
+    margin: 0;
+    border: 2px solid #444;
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+@media screen and (min-width: 772px) {
+
+    main {
+        grid-template-columns: 1fr 1fr;   
+    }
+
+    figure {
+        border-radius: 50%;   
+        overflow: hidden;
+    }
+
+    figure:last-child {
+        grid-column: span 2;  
+    }
+}
+
+
+
+
+@media screen and (min-width: 992px) {
+
+    figure {
+        border-radius: 0;   
+    }
+
+    figure:nth-child(3n) {
+        grid-column: span 2;   
+    }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: #121212;
+        color: #eeeeee;
+    }
+
+    figure {
+        background-color: #222222;
+        color: #ffd966;      /* lighter yellowish text */
+        border-color: black; /* black border */
+    }
+}
